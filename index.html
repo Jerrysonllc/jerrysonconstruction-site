@@ -1,44 +1,192 @@
-.hero {
-  position: relative;
-  background-image: url('foto-de-background.png'); /* o reemplaza por otra más profesional */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 160px 20px;
-  text-align: center;
-  color: white;
-  z-index: 1;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55); /* fondo oscuro transparente */
-  z-index: 0;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 3.4em;
-  margin: 0;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 1px 2px 6px rgba(0,0,0,0.8);
-}
-
-.hero p {
-  font-size: 1.3em;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-shadow: 1px 2px 5px rgba(0,0,0,0.7);
-  margin-top: 1em;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jerryson Construction & Maintenance LLC - Soluciones confiables para tu proyecto en Puerto Rico">
+  <meta name="keywords" content="construcción, mantenimiento, Puerto Rico, remodelaciones, proyectos civiles, Jerryson, contratistas, RUL, CFSE, SAM.gov, SDVOSB">
+  <title>Jerryson Construction & Maintenance LLC</title>
+  <link rel="icon" href="logo-blanco.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f8;
+      color: #2a2a2a;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      z-index: 1000;
+    }
+    header img {
+      height: 48px;
+    }
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #8C1D1D;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #2a2a2a;
+    }
+    .hero {
+      position: relative;
+      background-image: url('foto-de-background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 160px 20px;
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3.2em;
+      margin: 0;
+      font-weight: 900;
+      color: #ffffff;
+      text-shadow: 1px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.3em;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-shadow: 1px 2px 5px rgba(0,0,0,0.6);
+      margin-top: 1em;
+    }
+    .cta-buttons {
+      margin-top: 2.5em;
+    }
+    .cta-buttons a {
+      background-color: #8C1D1D;
+      color: white;
+      padding: 12px 24px;
+      margin: 0 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background-color: #660000;
+    }
+    .section {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #8C1D1D;
+      border-bottom: 3px solid #e2e2e2;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .trust-logos {
+      text-align: center;
+    }
+    .trust-logos img {
+      height: 65px;
+      margin: 15px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+    .trust-logos img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .testimonial {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-left: 6px solid #8C1D1D;
+      font-style: italic;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    button {
+      padding: 14px;
+      background-color: #8C1D1D;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #660000;
+    }
+    footer {
+      background-color: #121212;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- A partir de aquí permanece todo igual que tu versión -->
+  <!-- Solo asegúrate de tener tu contenido HTML debajo intacto -->
+</body>
+</html>
