@@ -478,17 +478,26 @@
 <section class="section" id="contacto">
   <h2 id="contact-title">Contáctanos</h2>
   <form action="https://formsubmit.co/jerrysonconstructionllc@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Tu nombre / Your name" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,}" title="Por favor escribe un nombre válido (mínimo 2 letras)." />
-  
-  <input type="email" name="email" placeholder="Tu correo electrónico / Your email" required title="Debes escribir un correo electrónico válido." />
-  
-  <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí... / Write your message here..." required minlength="10" maxlength="500" title="Tu mensaje debe tener al menos 10 caracteres."></textarea>
-  
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto">
+  <input type="text" name="name" placeholder="Tu nombre / Your name" required
+         pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,}" 
+         title="Por favor escribe un nombre válido (mínimo 2 letras)." />
+
+  <input type="email" name="email" placeholder="Tu correo electrónico / Your email" required
+         title="Debes escribir un correo electrónico válido." />
+
+  <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí... / Write your message here..." 
+            required minlength="10" maxlength="500"
+            title="Tu mensaje debe tener al menos 10 caracteres."></textarea>
+
+  <!-- Campos ocultos para personalización -->
+  <input type="hidden" name="_subject" value="📩 Nuevo mensaje recibido desde el sitio web de Jerryson Construction & Maintenance LLC">
   <input type="hidden" name="_captcha" value="false">
-  
+  <input type="hidden" name="_template" value="box">
+  <input type="hidden" name="_next" value="https://jerrysonconstructionllc.github.io/jerrysonconstruction-site/gracias.html">
+
   <button type="submit" id="contact-button">Enviar mensaje</button>
 </form>
+
   <br />
   <a href="https://wa.me/17874551700" target="_blank">
     <button id="whatsapp-button" style="background-color: #25D366;">Contactar por WhatsApp</button>
