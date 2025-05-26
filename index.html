@@ -314,45 +314,15 @@
            Structural repairs and interior finishes.</p>
       </div>
     </div>
- <script>
+<script>
   const translations = {
-    es: {
-      "Experience": "Experiencia",
-      "Services": "Servicios",
-      "Projects": "Proyectos",
-      "Testimonials": "Testimonios",
-      "Contact": "Contacto",
-      "View services": "Ver servicios",
-      "Request a quote": "Solicitar cotización",
-      "Meet the Founder": "Conoce al Fundador",
-      "Our Experience": "Nuestra Experiencia",
-      "Certifications and Compliance": "Certificaciones y Cumplimiento",
-      "Recent Projects": "Proyectos Recientes",
-      "Contact Us": "Contáctanos",
-      "Send Message": "Enviar mensaje",
-      "Contact via WhatsApp": "Contactar por WhatsApp",
-      "Facade remodeling and structural expansion.": "Remodelación de fachada y ampliación estructural.",
-      "Structural repairs and interior finishes.": "Reparaciones estructurales y acabados interiores.",
-      "Reliable solutions for your project in Puerto Rico": "Soluciones confiables para tu proyecto en Puerto Rico"
-    },
     en: {
-      "Experiencia": "Experience",
-      "Servicios": "Services",
-      "Proyectos": "Projects",
-      "Testimonios": "Testimonials",
-      "Contacto": "Contact",
-      "Ver servicios": "View services",
-      "Solicitar cotización": "Request a quote",
-      "Conoce al Fundador": "Meet the Founder",
-      "Nuestra Experiencia": "Our Experience",
-      "Certificaciones y Cumplimiento": "Certifications and Compliance",
-      "Proyectos Recientes": "Recent Projects",
-      "Contáctanos": "Contact Us",
-      "Enviar mensaje": "Send Message",
-      "Contactar por WhatsApp": "Contact via WhatsApp",
-      "Remodelación de fachada y ampliación estructural.": "Facade remodeling and structural expansion.",
-      "Reparaciones estructurales y acabados interiores.": "Structural repairs and interior finishes.",
-      "Soluciones confiables para tu proyecto en Puerto Rico": "Reliable solutions for your project in Puerto Rico"
+      "founder-title": "Meet the Founder",
+      "founder-description": "Jerryson Vázquez, founder of Jerryson Construction & Maintenance LLC, holds a bachelor's degree in Civil Engineering and over a decade of experience leading structural maintenance and construction projects in residential and rural Puerto Rican settings.\n\nHis professional background blends technical execution, civil supervision, and scheduling coordination, with deep knowledge of local codes and compliance processes.\n\nA former U.S. Army service member and Puerto Rico Police officer, Mr. Vázquez b...
+    },
+    es: {
+      "founder-title": "Conoce al Fundador",
+      "founder-description": "Jerryson Vázquez, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.\n\nSu historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución, con un profundo conocimiento de normativas locales y procesos de cumplimiento.\n\nExmilitar del U.S. Army y exfuncionario ...
     }
   };
 
@@ -360,19 +330,19 @@
 
   document.getElementById("language-toggle").addEventListener("click", function () {
     const lang = currentLang === "es" ? "en" : "es";
-    document.querySelectorAll("*").forEach(el => {
-      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-        const text = el.textContent.trim();
-        if (translations[lang][text]) {
-          el.textContent = translations[lang][text];
-        }
+
+    document.querySelectorAll("[data-translate]").forEach(el => {
+      const key = el.getAttribute("data-translate");
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
       }
     });
+
     currentLang = lang;
     this.textContent = lang === "es" ? "EN" : "ES";
   });
 </script>
-
+ 
 </body>
   </div>
 </section>
