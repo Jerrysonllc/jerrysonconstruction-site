@@ -315,16 +315,12 @@
 <script>
   const translations = {
     es: {
-      "Meet the Founder": "Conoce al Fundador",
-      "Jerryson Vázquez, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.<br><br>Su historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución, con un profundo conocimiento de normativas locales y procesos de cumplimiento.<br><br>Exmilitar del <strong>U.S. Army</strong> y exfuncionario de la <strong>Policía de Puerto Rico</strong>, el Sr. Vázquez aporta una visión operativa basada en disciplina, cumplimiento y confianza institucional. Su empresa está preparada para ejecutar proyectos con precisión, responsabilidad y enfoque en resultados.":
-        "Jerryson Vázquez, founder of Jerryson Construction & Maintenance LLC, holds a Bachelor's degree in Civil Engineering and over a decade of experience leading construction and structural maintenance projects in residential and rural settings across Puerto Rico.<br><br>His professional background combines technical execution, civil supervision, and execution timeline coordination, with deep knowledge of local regulations and compliance processes.<br><br>A former <strong>U.S. Army</strong> service member and <strong>Puerto Rico Police</strong> officer, Mr. Vázquez brings an operational vision based on discipline, compliance, and institutional trust. His company is prepared to deliver projects with precision, accountability, and results-driven focus.",
-      "Conoce al Fundador": "Meet the Founder"
+      "founder-title": "Conoce al Fundador",
+      "founder-text": `Jerryson Vázquez, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.<br><br>Su historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución, con un profundo conocimiento de normativas locales y procesos de cumplimiento.<br><br>Exmilitar del <strong>U.S. Army</strong> y exfuncionario de la <strong>Policía de Puerto Rico</strong>, el Sr. Vázquez aporta una visión operativa basada en disciplina, cumplimiento y confianza institucional. Su empresa está preparada para ejecutar proyectos con precisión, responsabilidad y enfoque en resultados.`
     },
     en: {
-      "Conoce al Fundador": "Meet the Founder",
-      "Jerryson Vázquez, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.<br><br>Su historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución, con un profundo conocimiento de normativas locales y procesos de cumplimiento.<br><br>Exmilitar del <strong>U.S. Army</strong> y exfuncionario de la <strong>Policía de Puerto Rico</strong>, el Sr. Vázquez aporta una visión operativa basada en disciplina, cumplimiento y confianza institucional. Su empresa está preparada para ejecutar proyectos con precisión, responsabilidad y enfoque en resultados.":
-        "Jerryson Vázquez, founder of Jerryson Construction & Maintenance LLC, holds a Bachelor's degree in Civil Engineering and over a decade of experience leading construction and structural maintenance projects in residential and rural settings across Puerto Rico.<br><br>His professional background combines technical execution, civil supervision, and execution timeline coordination, with deep knowledge of local regulations and compliance processes.<br><br>A former <strong>U.S. Army</strong> service member and <strong>Puerto Rico Police</strong> officer, Mr. Vázquez brings an operational vision based on discipline, compliance, and institutional trust. His company is prepared to deliver projects with precision, accountability, and results-driven focus.",
-      "Meet the Founder": "Conoce al Fundador"
+      "founder-title": "Meet the Founder",
+      "founder-text": `Jerryson Vázquez, founder of Jerryson Construction & Maintenance LLC, holds a Bachelor's degree in Civil Engineering and over a decade of experience leading construction and structural maintenance projects in residential and rural settings across Puerto Rico.<br><br>His professional background combines technical execution, civil supervision, and execution timeline coordination, with deep knowledge of local regulations and compliance processes.<br><br>A former <strong>U.S. Army</strong> service member and <strong>Puerto Rico Police</strong> officer, Mr. Vázquez brings an operational vision based on discipline, compliance, and institutional trust. His company is prepared to deliver projects with precision, accountability, and results-driven focus.`
     }
   };
 
@@ -332,18 +328,19 @@
 
   document.getElementById("language-toggle").addEventListener("click", function () {
     const lang = currentLang === "es" ? "en" : "es";
-    document.querySelectorAll("*").forEach(el => {
-      if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-        const text = el.innerHTML.trim();
-        if (translations[lang][text]) {
-          el.innerHTML = translations[lang][text];
-        }
+
+    for (const id in translations[lang]) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.innerHTML = translations[lang][id];
       }
-    });
+    }
+
     currentLang = lang;
     this.textContent = lang === "es" ? "EN" : "ES";
   });
 </script>
+
 </body>
   </div>
 </section>
