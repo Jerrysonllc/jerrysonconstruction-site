@@ -7,8 +7,7 @@
   <meta name="keywords" content="construcción, mantenimiento, Puerto Rico, remodelaciones, proyectos civiles, Jerryson, contratistas, RUL, CFSE, SAM.gov, SDVOSB">
   <title>Jerryson Construction & Maintenance LLC</title>
   <link rel="icon" href="logo-blanco.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -35,7 +34,7 @@
     nav a {
       margin-left: 25px;
       text-decoration: none;
-      color: #7b0000;
+      color: #a00000;
       font-weight: 600;
       font-size: 1rem;
       transition: color 0.3s ease;
@@ -44,8 +43,7 @@
       color: #333;
     }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                  url('https://github.com/Jerrysonllc/jerrysonconstruction-site/blob/main/imagen%20backgraund%20-%20Copy.png?raw=true');
+      background-image: url('foto-de-background.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -58,26 +56,34 @@
       margin: 0;
       font-weight: 900;
       text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-      font-family: 'Playfair Display', serif;
     }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://github.com/Jerrysonllc/jerrysonconstruction-site/blob/main/imagen%20backgraund%20-%20Copy.png?raw=true');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 160px 20px;
+  text-align: center;
+  color: white;
+}
     .cta-buttons {
       margin-top: 2.5em;
     }
     .cta-buttons a {
-      background-color: #7b0000;
+      background-color: #a00000;
       color: white;
       padding: 12px 24px;
       margin: 0 12px;
-      border-radius: 10px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      border: 1px solid #ccc;
     }
     .cta-buttons a:hover {
-      background-color: #5a0000;
+      background-color: #820000;
     }
     .section {
       padding: 70px 20px;
@@ -87,11 +93,10 @@
     .section h2 {
       font-size: 2.5em;
       margin-bottom: 30px;
-      color: #7b0000;
+      color: #a00000;
       border-bottom: 3px solid #e0e0e0;
       display: inline-block;
       padding-bottom: 6px;
-      font-family: 'Playfair Display', serif;
     }
     .grid {
       display: grid;
@@ -126,7 +131,7 @@
     .testimonial {
       background: #ffffff;
       padding: 25px 30px;
-      border-left: 6px solid #7b0000;
+      border-left: 6px solid #a00000;
       font-style: italic;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
@@ -144,18 +149,17 @@
     }
     button {
       padding: 14px;
-      background-color: #7b0000;
+      background-color: #a00000;
       color: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
       font-weight: bold;
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      border: 1px solid #ccc;
     }
     button:hover {
-      background-color: #5a0000;
+      background-color: #820000;
     }
     footer {
       background-color: #1a1a1a;
@@ -164,35 +168,13 @@
       padding: 40px 20px;
       font-size: 0.9em;
     }
-    /* Animaciones */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-    /* Responsividad */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2em;
-      }
-      nav a {
-        margin-left: 15px;
-        font-size: 0.9rem;
-      }
-    }
   </style>
 </head>
 <body>
 <header>
-  <img src="https://github.com/Jerrysonllc/jerrysonconstruction-site/blob/main/logo_jerryson_crop_final.png?raw=true"
-       alt="Jerryson Construction Logo"
-       style="height: 140px; padding: 0px 12px; margin-top: -10px; object-fit: contain;">
+<img src="https://github.com/Jerrysonllc/jerrysonconstruction-site/blob/main/logo_jerryson_crop_final.png?raw=true"
+     alt="Jerryson Construction Logo"
+     style="height: 140px; padding: 0px 12px; margin-top: -10px; object-fit: contain;">
   <nav>
     <a href="#experiencia">Experiencia</a>
     <a href="#servicios">Servicios</a>
@@ -202,23 +184,111 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Jerryson Construction & Maintenance LLC</h1>
-  <p>Soluciones confiables para tu proyecto en Puerto Rico</p>
-  <div class="cta-buttons">
-    <a href="#servicios">Ver servicios</a>
-    <a href="#contacto">Solicitar cotización</a>
+  <section class="hero">
+    <h1>Jerryson Construction & Maintenance LLC</h1>
+    <p>Soluciones confiables para tu proyecto en Puerto Rico</p>
+    <div class="cta-buttons">
+      <a href="#servicios">Ver servicios</a>
+      <a href="#contacto">Solicitar cotización</a>
+    </div>
+  </section>
+<section class="section" id="fundador">
+  <h2>Conoce al Fundador</h2>
+  <div class="card">
+    <p>
+      <strong>Jerryson Vázquez</strong>, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.
+      <br><br>
+      Su historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución, con un profundo conocimiento de normativas locales y procesos de cumplimiento.
+      <br><br>
+      Exmilitar del <strong>U.S. Army</strong> y exfuncionario de la <strong>Policía de Puerto Rico</strong>, el Sr. Vázquez aporta una visión operativa basada en disciplina, cumplimiento y confianza institucional. Su empresa está preparada para ejecutar proyectos con precisión, responsabilidad y enfoque en resultados.
+    </p>
   </div>
 </section>
 
-<section class="section" id="fundador">
-  <h2>Conoce al Fundador</h2>
-  <div class="card" style="display:flex; align-items:center; gap:24px;">
-    <img src="https://github.com/Jerrysonllc/jerrysonconstruction-site/blob/main/foto-jerryson.jpg?raw=true" alt="Jerryson Vázquez" style="width:160px; border-radius:12px;" />
-    <div>
-      <p>
-        <strong>Jerryson Vázquez</strong>, fundador de Jerryson Construction & Maintenance LLC, cuenta con un bachillerato en Ingeniería Civil y más de una década de experiencia liderando proyectos de construcción y mantenimiento estructural en contextos residenciales y rurales en Puerto Rico.
-        <br><br>
-        Su historial profesional combina ejecución técnica, supervisión civil y coordinación de tiempos de ejecución
-::contentReference[oaicite:6]{index=6}
- 
+  <section class="section" id="experiencia">
+    <h2>Nuestra Experiencia</h2>
+    <div class="grid">
+      <div class="card">🏗️ Construcción en concreto reforzado</div>
+      <div class="card">🧱 Ampliaciones en residencias y comercios</div>
+      <div class="card">🌴 Obras en terreno inclinado y zonas rurales</div>
+      <div class="card">🔧 Mantenimiento de estructuras existentes</div>
+      <div class="card">📐 Supervisión técnica con cumplimiento de códigos</div>
+      <div class="card">📄 Manejo de permisos y cronogramas</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Certificaciones y Cumplimiento</h2>
+    <div class="trust-logos">
+      <img src="logo-rul.png" alt="Registro Único de Licitadores">
+      <img src="logo-cfse.png" alt="CFSE">
+      <img src="logo-sam.png" alt="SAM.gov">
+      <img src="logo-sba.png" alt="SBA SDVOSB">
+    </div>
+  </section>
+
+  <section class="section" id="servicios">
+    <h2>Servicios / Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Construcción Residencial / Residential Construction</h3>
+        <p>Diseño y ejecución de estructuras en concreto adaptadas al clima tropical de Puerto Rico.<br>Design and execution of concrete structures adapted to Puerto Rico's tropical climate.</p>
+      </div>
+      <div class="card">
+        <h3>Remodelaciones / Renovations</h3>
+        <p>Transformamos y modernizamos espacios existentes con acabados de alta calidad.<br>We transform and modernize existing spaces with high-quality finishes.</p>
+      </div>
+      <div class="card">
+        <h3>Mantenimiento General / General Maintenance</h3>
+        <p>Soluciones preventivas y correctivas para propiedades residenciales y comerciales.<br>Preventive and corrective solutions for residential and commercial properties.</p>
+      </div>
+      <div class="card">
+        <h3>Supervisión de Proyectos / Project Supervision</h3>
+        <p>Coordinación técnica y cumplimiento de obras civiles, incluyendo permisos y cronograma.<br>Technical coordination and civil project compliance, including permits and scheduling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proyectos">
+    <h2>Proyectos Recientes / Recent Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Casa en Hormigueros / Home in Hormigueros</h3>
+        <p>Remodelación de fachada y ampliación estructural.<br>Facade remodeling and structural expansion.</p>
+      </div>
+      <div class="card">
+        <h3>Negocio en Ponce / Business in Ponce</h3>
+        <p>Reparaciones estructurales y acabados interiores.<br>Structural repairs and interior finishes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonios">
+    <h2>Testimonios / Testimonials</h2>
+    <div class="testimonial">
+      “Jerryson nos ayudó a transformar nuestra casa. Profesionales y responsables desde el primer día.”<br>
+      "Jerryson helped us transform our home. Professional and reliable from day one."<br>
+      — Cliente en Juana Díaz / Client in Juana Díaz
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2>Contáctanos / Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico / Your email" required />
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí... / Write your message here..." required></textarea>
+      <button type="submit">Enviar mensaje / Send Message</button>
+    </form>
+    <br />
+    <a href="https://wa.me/17874551700" target="_blank">
+      <button style="background-color: #25D366;">Contactar por WhatsApp / Contact via WhatsApp</button>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 Jerryson Construction & Maintenance LLC – Todos los derechos reservados / All rights reserved<br />
+    Bo. Río Chiquito, Carr. 504 Km. 6.7, Ponce, PR 00731
+  </footer>
+</body>
+</html>
