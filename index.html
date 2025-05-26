@@ -339,8 +339,15 @@
 
       // Testimonios
       "testimonials-title": "Testimonios",
-      "testimonial-text": `“Jerryson nos ayudó a transformar nuestra casa. Profesionales y responsables desde el primer día.”<br>
-      — Cliente en Juana Díaz`,
+      "testimonial-text": `“El equipo de <strong>Jerryson Construction & Maintenance LLC</strong> transformó nuestra residencia completamente. Fueron puntuales, organizados y superaron nuestras expectativas con acabados impecables.”<br>— Cliente en Ponce`,
+      "testimonial2-text": `“Contratar a <strong>Jerryson Construction & Maintenance LLC</strong> fue la mejor decisión para nuestro negocio. Ejecutaron todo según el cronograma y con gran atención a los detalles técnicos.”<br>— Propietario comercial en Guayanilla`,
+
+      // Formulario testimonio
+      "testimonial-form-title": "Deja tu testimonio",
+      "testimonial-name": "Tu nombre / Your name",
+      "testimonial-city": "Ciudad o proyecto / City or project",
+      "testimonial-message": "Escribe tu testimonio aquí... / Write your testimonial here...",
+      "testimonial-submit": "Enviar testimonio",
 
       // Contacto
       "contact-title": "Contáctanos",
@@ -396,8 +403,15 @@
 
       // Testimonials
       "testimonials-title": "Testimonials",
-      "testimonial-text": `"Jerryson helped us transform our home. Professional and reliable from day one."<br>
-      — Client in Juana Díaz`,
+      "testimonial-text": `"The team at <strong>Jerryson Construction & Maintenance LLC</strong> fully transformed our home. They were punctual, organized, and exceeded expectations with flawless finishes."<br>— Client in Ponce`,
+      "testimonial2-text": `"Hiring <strong>Jerryson Construction & Maintenance LLC</strong> was the best decision for our business. Everything was executed according to schedule with attention to every technical detail."<br>— Commercial Owner in Guayanilla`,
+
+      // Testimonial Form
+      "testimonial-form-title": "Leave Your Testimonial",
+      "testimonial-name": "Your name",
+      "testimonial-city": "City or project",
+      "testimonial-message": "Write your testimonial here...",
+      "testimonial-submit": "Submit Testimonial",
 
       // Contact
       "contact-title": "Contact Us",
@@ -417,7 +431,11 @@
     for (const id in translations[lang]) {
       const el = document.getElementById(id);
       if (el) {
-        el.innerHTML = translations[lang][id];
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+          el.placeholder = translations[lang][id];
+        } else {
+          el.innerHTML = translations[lang][id];
+        }
       }
     }
 
